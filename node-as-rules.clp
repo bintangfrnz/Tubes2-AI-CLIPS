@@ -2,13 +2,6 @@
 ; FACT TEMPLATES
 ; =====================================================
 
-; The phase fact indicates the current action to be
-; undertaken before the game can begin
-
-; (phase 
-;    <action>)      ; Either choose-player or 
-                    ; select-pile-size
-
 (deftemplate field-value
    (slot field)
    (slot value)

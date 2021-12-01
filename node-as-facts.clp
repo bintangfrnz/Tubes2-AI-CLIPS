@@ -2,13 +2,6 @@
 ; FACT TEMPLATES
 ; =====================================================
 
-; The phase fact indicates the current action to be
-; undertaken before the game can begin
-
-; (phase 
-;    <action>)      ; Either choose-player or 
-                    ; select-pile-size
-
 (deftemplate node-numeric
    (slot id)
    (slot field)
@@ -114,6 +107,7 @@
 
 (defrule print-leaf
    ?pi <- (print-id (id ?id) (offset ?off) (branch-side ?bs))
+   (test (< ?id 2))
 =>
    (retract ?pi)
    (loop-for-count ?off (printout t "|    "))
