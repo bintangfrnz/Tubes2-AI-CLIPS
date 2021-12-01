@@ -35,8 +35,10 @@
    (leaf (id 1) (value "Terprediksi kanker payudara"))
 )
 
-(deffacts tree-nodes ; Taroh node tree disini, atm gw buat cabang kiri dlu
-   (node-numeric (id 2) (field "mean concave points") (treshold 0.05) (child0 3) (child1 1))
+(deffacts tree-nodes
+   ; root
+   (node-numeric (id 2) (field "mean concave points") (treshold 0.05) (child0 3) (child1 12))
+      ; Cabang kiri
       (node-numeric (id 3) (field "worst radius") (treshold 16.83) (child0 4) (child1 10))
          (node-numeric (id 4) (field "radius error") (treshold 0.63) (child0 5) (child1 9))
             (node-numeric (id 5) (field "worst texture") (treshold 30.15) (child0 1) (child1 6))
@@ -46,7 +48,12 @@
             (node-numeric (id 9) (field "mean smoothness") (treshold 0.09) (child0 1) (child1 0))
          (node-numeric (id 10) (field "mean texture") (treshold 16.19) (child0 1) (child1 11))
             (node-numeric (id 11) (field "concave points error") (treshold 0.01) (child0 0) (child1 1))
-      ; Sok kalo mau lanjutin cabang kanan
+      ; Cabang kanan
+      (node-numeric (id 12) (field "worst perimeter") (treshold 114.45) (child0 13) (child1 0))
+         (node-numeric (id 13) (field "worst texture") (treshold 25.65) (child0 14) (child1 15))
+            (node-numeric (id 14) (field "worst concave points") (treshold 0.17) (child0 1) (child1 0))
+            (node-numeric (id 15) (field "perimeter error") (treshold 1.56) (child0 16) (child1 0))
+               (node-numeric (id 16) (field "mean radius") (treshold 13.34) (child0 0) (child1 1))
 )
 
 (deffacts initial-fact
