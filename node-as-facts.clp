@@ -59,6 +59,7 @@
 (deffacts initial-fact
    (is-read)
    (id 2)
+   (print-id (id 2) (offset -1) (branch-side 0))
 )
 
 ; *****
@@ -94,8 +95,6 @@
    (leaf (id ?id) (value ?val))
 =>
    (printout t ?val crlf crlf)
-   (printout t "Tree yang digunakan:" crlf)
-   (assert (print-id (id 2) (offset 0) (branch-side 0)))
 )
 
 (defrule print-tree
