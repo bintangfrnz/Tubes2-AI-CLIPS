@@ -31,8 +31,8 @@
 ; ====================================================
 
 (deffacts tree-leafs
-   (leaf (id 0) (value "Terprediksi tidak kanker payudara"))
-   (leaf (id 1) (value "Terprediksi kanker payudara"))
+   (leaf (id 0) (value "Hasil Prediksi = Terprediksi tidak kanker payudara"))
+   (leaf (id 1) (value "Hasil Prediksi = Terprediksi kanker payudara"))
 )
 
 (deffacts tree-nodes
@@ -58,9 +58,7 @@
 
 (deffacts initial-fact
    (is-read)
-   ;(id 2)
-   (print-id (id 2) (offset -1) (branch-side 0))
-   (nb-element 0)
+   (id 2)
 )
 
 ; *****
